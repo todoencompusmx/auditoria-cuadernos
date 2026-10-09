@@ -106,27 +106,27 @@ Usar una tabla de baremos. Ejemplo con muestra de referencia:
 
 ## 4. Prompt de extracción de rasgos
 
+Entrada: array de 50 enteros entre 1 y 5.
+Ejemplo: [3, 5, 2, 4, 1, ...]
+
 Eres un analista psicométrico. Recibirás:
 
-Las respuestas crudas a 50 ítems del IPIP-50.
-
-La tabla de percentiles de referencia.
+- Las respuestas crudas a 50 ítems del IPIP-50.
+- La tabla de percentiles de referencia.
 
 Tu tarea:
 
-Invertir los ítems marcados como (R) usando 6 − respuesta.
-
-Sumar por dimensión (Apertura, Responsabilidad, Extroversión, Amabilidad, Neuroticismo).
-
-Convertir cada suma a percentil usando la tabla.
+- Invertir los ítems marcados como (R) usando 6 − respuesta.
+- Sumar por dimensión (Apertura, Responsabilidad, Extroversión, Amabilidad, Neuroticismo).
+- Convertir cada suma a percentil usando la tabla.
 
 Devolver un JSON con:
 {
-"Apertura": {"bruto": int, "percentil": int},
-"Responsabilidad": {"bruto": int, "percentil": int},
-"Extroversión": {"bruto": int, "percentil": int},
-"Amabilidad": {"bruto": int, "percentil": int},
-"Neuroticismo": {"bruto": int, "percentil": int}
+  "Apertura": {"bruto": int, "percentil": int},
+  "Responsabilidad": {"bruto": int, "percentil": int},
+  "Extroversión": {"bruto": int, "percentil": int},
+  "Amabilidad": {"bruto": int, "percentil": int},
+  "Neuroticismo": {"bruto": int, "percentil": int}
 }
 
 No interpretes los resultados. Solo calcula.
@@ -141,16 +141,4 @@ El IPIP-50 es de **dominio público**, pero los **baremos de percentiles** que u
 - ¿De qué estudio?
 - ¿De qué año?
 
-Sin esa fuente, la conversión a percentiles no es defendible. Puedes dejar la tabla como **provisional** y anotar que los baremos locales están pendientes (eso ya figura en `Brechas_Criticas!A2`).
-
----
-
-## Siguiente paso
-
-1. Copia todo eso en un archivo `.md`.
-2. Súbelo a Google Drive, GitHub o Notion.
-3. Copia la URL en `Auditoria_Cuadernos!N2`.
-4. Cambia `C2` de `(Faltante)` a `Fase1_Psicometria_OCEAN_BigFive_v1`.
-5. Actualiza `L2` si hace falta.
-
-Cuando lo tengas subido, avísame y verificamos si `R2` cambia de estado.
+Sin esa fuente, la conversión a percentiles no es defendible. Puedes dejar la tabla como **provisional** y anotar que los baremos locales están pendientes.
